@@ -8,6 +8,9 @@ const sumAll = function(first, last) {
 
         return sum;
     }
+
+    if (first < 0 || last < 0) return "ERROR"
+    if (!Number.isInteger(first) || !Number.isInteger(last)) return "ERROR"
     
     if (first < last) return sum(first, last);
     else return sum(last, first);
